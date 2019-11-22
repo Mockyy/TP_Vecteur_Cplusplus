@@ -22,13 +22,6 @@ public:
 		this->nZ = z;
 	}
 
-	//2 arguments
-	inline Vecteur3(float x, float y)
-	{
-		this->nX = x;
-		this->nY = y;
-	}
-
 	//-----Destructeur-----//
 	~Vecteur3();
 
@@ -41,5 +34,15 @@ public:
 	void setX(float x);
 	void setY(float y);
 	void setZ(float z);
+
+	//-----Coincide-----//
+	//Par valeur
+	bool valCoincide(Vecteur3 vecteur);
+
+	//Par adresse
+	bool adCoincide(Vecteur3* vecteur);
+
+	//Par référence
+	bool refCoincide(Vecteur3& vecteur);
 };
 
