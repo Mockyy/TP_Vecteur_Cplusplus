@@ -10,6 +10,8 @@ int main()
 
 	Vecteur3 vect2 = Vecteur3();
 
+	//----------Exercice 2----------//
+
 	//Test par adresse
 	if (vect1.adCoincide(&vect2))
 	{
@@ -25,6 +27,14 @@ int main()
 
 	//Test par référence
 	//vect1.refCoincide(vect2);
+
+	//----------Exercice 3----------//
+	//Par valeur
+	vect1.valNormax(vect2);
+
+	//Par référence
+	vect1.refNormax(vect2);
+
 
 	system("pause");
 

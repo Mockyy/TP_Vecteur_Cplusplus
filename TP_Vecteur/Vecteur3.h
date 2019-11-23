@@ -12,7 +12,12 @@ public:
 
 	//-----Constructeurs-----//
 	//Par défaut
-	Vecteur3();
+	inline Vecteur3()
+	{
+		nX = 0;
+		nY = 0;
+		nZ = 0;
+	}
 
 	//3 arguments
 	inline Vecteur3(float x, float y, float z)
@@ -35,6 +40,7 @@ public:
 	void setY(float y);
 	void setZ(float z);
 
+
 	//-----Coincide-----//
 	//Par valeur
 	bool valCoincide(Vecteur3 vecteur);
@@ -44,5 +50,14 @@ public:
 
 	//Par référence
 	bool refCoincide(Vecteur3& vecteur);
+
+
+	//-----Normax-----//
+	//Par valeur
+	void valNormax(Vecteur3 vecteur);
+
+	void refNormax(Vecteur3 &vecteur);
+
+	void adNormax(Vecteur3* vecteur);
 };
 
