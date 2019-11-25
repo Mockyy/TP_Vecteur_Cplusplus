@@ -96,7 +96,7 @@ void Vecteur3::valNormax(Vecteur3 vecteur)
 	}
 	else
 	{
-		cout << "Le vecteur 2 est plus grand" << norme2 << endl;
+		cout << "Le vecteur 2 est plus grand : " << norme2 << endl;
 	}
 }
 
@@ -112,7 +112,7 @@ void Vecteur3::refNormax(Vecteur3 &vecteur)
 	}
 	else
 	{
-		cout << "Le vecteur 2 est plus grand" << norme2 << endl;
+		cout << "Le vecteur 2 est plus grand : " << norme2 << endl;
 	}
 }
 
@@ -128,6 +128,31 @@ void Vecteur3::adNormax(Vecteur3* vecteur)
 	}
 	else
 	{
-		cout << "Le vecteur 2 est plus grand" << norme2 << endl;
+		cout << "Le vecteur 2 est plus grand : " << norme2 << endl;
 	}
+}
+
+//-----Afffichage------//
+
+void Vecteur3::affichage()
+{
+	cout << "< X = " << nX << ", Y = " << nY << ", Z = " << nZ << '>' << endl;
+}
+
+//-----Somme de deux vecteurs-----//
+
+Vecteur3 Vecteur3::somme(Vecteur3 &vecteur)
+{
+	Vecteur3 somme(nX + vecteur.nX, nY + vecteur.nY, nZ + vecteur.nZ);
+
+	return somme;
+}
+
+//-----Produit scalaire de deux vecteurs-----//
+
+float Vecteur3::prodScal(Vecteur3 &vecteur)
+{
+	float scal = (nX * vecteur.nX) + (nY * vecteur.nY) + (nZ * vecteur.nZ);
+
+	return scal;
 }

@@ -8,7 +8,9 @@ int main()
 {
 	Vecteur3 vect1(4, 5, 6);
 
-	Vecteur3 vect2 = Vecteur3();
+	//Vecteur3 vect2 = Vecteur3();
+
+	Vecteur3 vect2(4, 8, 8);
 
 	//----------Exercice 2----------//
 
@@ -34,6 +36,22 @@ int main()
 
 	//Par référence
 	vect1.refNormax(vect2);
+
+	//----------Exercice 4----------//
+	//Constructeur 
+	Vecteur3 vectZero = Vecteur3();
+
+	//Affichage
+	vectZero.affichage();
+
+	//Somme
+	Vecteur3 somme = vect1.somme(vect2);
+
+	cout << "Somme de vect1 et vect2 : ";
+	somme.affichage();
+
+	//Produit scalaire
+	cout << "Produit scalaire de vect1 et vect2 : " << vect1.prodScal(vect2) << endl;
 
 
 	system("pause");

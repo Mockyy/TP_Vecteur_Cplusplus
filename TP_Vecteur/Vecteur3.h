@@ -59,5 +59,14 @@ public:
 	void refNormax(Vecteur3 &vecteur);
 
 	void adNormax(Vecteur3* vecteur);
+
+	//-----Affichage-----//
+	void affichage();
+
+	//-----Somme-----//
+	Vecteur3 somme(Vecteur3 &vecteur);
+
+	//-----Produit scalaire-----//
+	float prodScal(Vecteur3 &vecteur);
 };
 
