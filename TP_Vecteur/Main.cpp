@@ -39,7 +39,7 @@ int main()
 
 	//----------Exercice 4----------//
 	//Constructeur 
-	Vecteur3 vectZero = Vecteur3();
+	Vecteur3 vectZero;
 
 	//Affichage
 	vectZero.affichage();
@@ -52,6 +52,9 @@ int main()
 
 	//Produit scalaire
 	cout << "Produit scalaire de vect1 et vect2 : " << vect1.prodScal(vect2) << endl;
+
+	//----------Exercice 5----------//
+	cout << "Il y a : " << Vecteur3::compte() << " vecteurs." << endl;
 
 
 	system("pause");

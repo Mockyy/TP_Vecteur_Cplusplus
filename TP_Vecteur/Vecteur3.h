@@ -8,16 +8,15 @@ private:
 	float  nY;
 	float  nZ;
 
+	static int nbVecteur;
+
 public:
+
+	static int compte();
 
 	//-----Constructeurs-----//
 	//Par défaut
-	inline Vecteur3()
-	{
-		nX = 0;
-		nY = 0;
-		nZ = 0;
-	}
+	Vecteur3();
 
 	//3 arguments
 	inline Vecteur3(float x, float y, float z)
@@ -25,6 +24,7 @@ public:
 		this->nX = x;
 		this->nY = y;
 		this->nZ = z;
+		nbVecteur++;
 	}
 
 	//-----Destructeur-----//
@@ -61,7 +61,7 @@ public:
 	void adNormax(Vecteur3* vecteur);
 
 	//-----Affichage-----//
-	void affichage();
+	void affichage() const;
 
 	//-----Somme-----//
 	Vecteur3 somme(Vecteur3 &vecteur);

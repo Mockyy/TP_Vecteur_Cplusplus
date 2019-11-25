@@ -4,9 +4,25 @@
 
 using namespace std;
 
+int Vecteur3::nbVecteur = 0;
+
+int Vecteur3::compte()
+{
+	return nbVecteur;
+}
+
+Vecteur3::Vecteur3()
+{
+	this->nX = 0;
+	this->nY = 0;
+	this->nZ = 0;
+	nbVecteur++;
+}
+
 //Destructeur
 Vecteur3::~Vecteur3()
 {
+	nbVecteur--;
 }
 
 //-----Getters-----//
@@ -134,7 +150,7 @@ void Vecteur3::adNormax(Vecteur3* vecteur)
 
 //-----Afffichage------//
 
-void Vecteur3::affichage()
+void Vecteur3::affichage() const
 {
 	cout << "< X = " << nX << ", Y = " << nY << ", Z = " << nZ << '>' << endl;
 }
